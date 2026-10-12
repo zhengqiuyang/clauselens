@@ -16,6 +16,16 @@
 | [03-技术方案](docs/03-技术方案.md) | RAG 深度工程：解析/切块/溯源/防幻觉/评测 | 【提案】 |
 | [04-生产计划与风险](docs/04-生产计划与风险.md) | 里程碑、kill 准则、法律合规边界 | 【提案】 |
 
+## 安装与使用
+
+```bash
+npx clauselens 合同.txt      # 单文件体检（不带参数跑内置示例）
+npx clauselens 合同.txt --json
+npm install -g clauselens    # 或全局安装
+```
+
+也可作为库使用：`import { buildReport, formatReportText } from 'clauselens'`。
+
 ## 定位红线（M0 拍板）
 
 工具输出**永远标注"不构成法律意见"**；不做诉讼/仲裁咨询；不替换律师——

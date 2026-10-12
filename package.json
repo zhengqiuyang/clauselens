@@ -1,15 +1,43 @@
 {
   "name": "clauselens",
   "version": "0.1.0",
-  "description": "合同风险透视：条款树解析 + 规则/LLM 双通道审查 + 代码级引用校验（宁缺勿错）。面向非律师岗位。",
+  "description": "合同风险透视（非律师版）：条款树解析 + 规则/LLM 双通道 + 代码级引用校验（宁缺勿错）+ 缺失条款检测。",
   "type": "module",
   "main": "src/index.js",
+  "bin": {
+    "clauselens": "src/cli.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "node --test",
-    "demo": "node src/demo.js"
+    "demo": "node src/cli.js",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengqiuyang/clauselens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhengqiuyang/clauselens/issues"
+  },
+  "homepage": "https://github.com/zhengqiuyang/clauselens#readme",
+  "publishConfig": {
+    "access": "public"
   },
   "engines": {
     "node": ">=18"
   },
+  "keywords": [
+    "contract",
+    "legal-ai",
+    "clause-analysis",
+    "rag",
+    "llm",
+    "cli"
+  ],
   "license": "MIT"
 }
